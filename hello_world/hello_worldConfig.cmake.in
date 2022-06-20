@@ -1,0 +1,5 @@
+@PACKAGE_INIT@
+include(CMakeFindDependencyMacro)
+set(hello_world_INCLUDE_DIRS "${PACKAGE_PREFIX_DIR}/include") 
+set(hello_world_LIBRARIES "${PACKAGE_PREFIX_DIR}/lib") 
+include("${CMAKE_CURRENT_LIST_DIR}/hello_world.cmake")
