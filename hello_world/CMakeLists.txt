@@ -10,11 +10,11 @@ set(WORLD_LIBS "${CMAKE_CURRENT_SOURCE_DIR}/libworld.so")
 
 add_library(hello_world SHARED hello_world.cpp)
 
-# # 连接到库
+# 连接到库
 target_link_libraries(hello_world PUBLIC ${HELLO_LIBS})
 target_link_libraries(hello_world PUBLIC ${WORLD_LIBS})
 
-target_include_directories(hello_world PUBLIC 
+target_include_directories(hello_world PUBLIC
                             $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
                             $<INSTALL_INTERFACE:include>)
 
